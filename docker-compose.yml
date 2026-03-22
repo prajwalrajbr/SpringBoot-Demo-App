@@ -1,17 +1,38 @@
 services:
-  app:
+  app-1:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: springboot-app
+    container_name: springboot-app-1
+    hostname: app-1
     expose:
       - "8080"
+
+  # app-2:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: springboot-app-2
+  #   hostname: app-2
+  #   expose:
+  #     - "8080"
+
+  # app-3:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: springboot-app-3
+  #   hostname: app-3
+  #   expose:
+  #     - "8080"
 
   nginx:
     image: nginx:1.27-alpine
     container_name: springboot-nginx
     depends_on:
-      - app
+      - app-1
+      # - app-2
+      # - app-3
     ports:
       - "80:80"
     volumes:
