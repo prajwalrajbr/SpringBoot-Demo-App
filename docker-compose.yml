@@ -5,6 +5,8 @@ services:
       dockerfile: Dockerfile
     container_name: springboot-app-1
     hostname: app-1
+    env_file:
+      - .env
     expose:
       - "8080"
 
@@ -14,6 +16,8 @@ services:
   #     dockerfile: Dockerfile
   #   container_name: springboot-app-2
   #   hostname: app-2
+  #   env_file:
+  #     - .env
   #   expose:
   #     - "8080"
 
@@ -23,6 +27,8 @@ services:
   #     dockerfile: Dockerfile
   #   container_name: springboot-app-3
   #   hostname: app-3
+  #   env_file:
+  #     - .env
   #   expose:
   #     - "8080"
 
