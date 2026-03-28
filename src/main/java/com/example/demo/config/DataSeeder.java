@@ -1,7 +1,9 @@
-package com.example.demo;
+package com.example.demo.config;
 
 import java.util.List;
 
+import com.example.demo.model.Book;
+import com.example.demo.repository.BookRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

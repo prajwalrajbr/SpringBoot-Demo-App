@@ -1,10 +1,12 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.List;
 import java.util.Map;
 
+import com.example.demo.service.MessageConsumer;
+import com.example.demo.service.MessageProducer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
